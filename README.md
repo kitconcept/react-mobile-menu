@@ -25,5 +25,5 @@ ToDo:
 
 * [ ] Fix overlay problem with react-reveal
 * [ ] Refactor code into re-usable component
-* [ ] Add fullscreen background animation (e.g. like on http://tobiasahlin.com/)
+* [ ] Add fullscreen background animation (e.g. like on http://tobiasahlin.com/ -> https://github.com/tobiasahlin/animated-menu)
 * [ ] Make menu configurable by allowing to pass params for hamburgers and react-reveal
