@@ -5,7 +5,7 @@ import Zoom from "react-reveal/Zoom";
 
 const IndexPage = () => (
   <div>
-    <Fade>
+    <Fade bottom duration={4000} delay={1000} distance={"100px"}>
       <h1>Hi people</h1>
     </Fade>
     <Zoom>
