@@ -23,5 +23,6 @@
 .hamburger-inner,
 .hamburger-inner::before,
 .hamburger-inner::after {
+  height: 2px;
   background-color: white !important;
 }
