@@ -14,7 +14,9 @@ const Header = () => (
       style={{
         margin: "0 auto",
         maxWidth: 960,
-        padding: "1.45rem 1.0875rem"
+        padding: "1.45rem 1.0875rem",
+        display: "flex",
+        justifyContent: "space-between"
       }}
     >
       <h1 style={{ margin: 0 }}>
@@ -27,8 +29,8 @@ const Header = () => (
         >
           Gatsby
         </Link>
-        <ReactMobileMenu />
       </h1>
+      <ReactMobileMenu />
     </div>
   </div>
 );
