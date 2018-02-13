@@ -25,42 +25,45 @@ class ReactMobileMenu extends React.Component {
       textDecoration: "none"
     };
     return (
-      <Fade duration={4000}>
+      <nav>
         <button
-          style={{ margin: 0, padding: 0, height: "42px", float: "right" }}
           onClick={this.openReactMobileMenu}
           className={`hamburger hamburger--spin ${this.state.menuIsOpen &&
             "is-active"}`}
           type="button"
+          style={{ position: "relative", zIndex: 1001 }}
         >
           <span className="hamburger-box">
-            <span className="hamburger-inner" style={{ zIndex: 99999 }} />
+            <span className="hamburger-inner" />
           </span>
-          {this.state.menuIsOpen && (
-            <div className={`mobileMenu ${this.state.menuIsOpen && "open"}`}>
-              <Fade left cascade when={this.state.menuIsOpen}>
-                <ul>
-                  <li>
-                    <a style={linkStyle} href="#">
-                      Home
-                    </a>
-                  </li>
-                  <li>
-                    <a style={linkStyle} href="#">
-                      About
-                    </a>
-                  </li>
-                  <li>
-                    <a style={linkStyle} href="#">
-                      Contact
-                    </a>
-                  </li>
-                </ul>
-              </Fade>
-            </div>
-          )}
         </button>
-      </Fade>
+        {this.state.menuIsOpen && (
+          <div
+            className={`mobileMenu ${this.state.menuIsOpen && "open"}`}
+            style={{ zIndex: 1000 }}
+          >
+            <Fade left cascade when={this.state.menuIsOpen}>
+              <ul>
+                <li>
+                  <a style={linkStyle} href="#">
+                    Home
+                  </a>
+                </li>
+                <li>
+                  <a style={linkStyle} href="#">
+                    About
+                  </a>
+                </li>
+                <li>
+                  <a style={linkStyle} href="#">
+                    Contact
+                  </a>
+                </li>
+              </ul>
+            </Fade>
+          </div>
+        )}
+      </nav>
     );
   }
 }
